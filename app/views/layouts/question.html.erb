@@ -1,0 +1,31 @@
+<% content_for :title, @title %>
+<div>
+	<h1  class="question_panel large-centered columns">
+		<div>
+			<form action="/game/next_question">
+				<ul class="inline-list">
+					<li id="question_text">
+						<%= @question[:operand1] %>
+						<%= @question[:operation] %>
+						<%= @question[:operand2] %>
+						=
+					</li>
+
+					<li>
+						<input type="text" name="answer" id="answer_input" autocomplete="off">
+					</li>
+				</ul>
+
+				<ul class="inline-list">
+					<li><button type="submit" class="next_question" id="next_button">Next</button></li>
+					<li><a href="/game/skip_question" class="button" id="skip_url">Skip</a></li></li>		
+					<li><a href="/game/finish_game?answer=" class="button" id="finish_url">Finish</a></li>
+				</ul>
+			</form>
+		</div>
+	</h1>
+
+	<div class="hide answer">
+		<input type="text" id="expected_answer" value="<%= @question[:answer] %>">
+	</div>
+</div>

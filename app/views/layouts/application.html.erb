@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="row">
+        <div class="large-12 columns">
+          <nav class="top-bar">
+            <ul class="left">
+              <!-- Title Area -->
+              <li class="name">
+                <h1>
+                  <a href="/home/show_options" id="start_again">
+                    Start Again
+                  </a>
+                </h1>
+              </li>
+            </ul>
+
+            <ul class="right">
+              <li class="name score">
+                <h1><a href="#" id="score_message">Score <%= session[:questions_answered] %> out of <%= session[:questions_presented] %></a></h1>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="large-12 columns">
+          <% flash.each do |name, msg| %>
+          <div class="alert-box <%= name == :notice ? "success" : "error" %>">
+            <%= msg if msg.is_a?(String) %>
+          </div>
+          <% end %>
+          <% flash = nil %>
+        </div>
+
+        <div class="main">
+          <div class="large-12 columns">
+            <%= yield %>
+          </div>
+        </div>
+
+        <div class="footer_text">
+          <div class="large-12 columns text-center">
+
+          </div>  
+        </div>    
+      </div>
+    </div>
+    
+
+    
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

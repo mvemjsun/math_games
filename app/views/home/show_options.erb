@@ -1,0 +1,30 @@
+<% content_for :title, @title %>
+<div class="row question_panel">
+	<div class="large-6 columns">
+
+		<div class="small-block-grid-1 game_level_div">
+			<li><h3 id="level_header">Please choose a Level</h3></li>
+			<li><%= image_tag("/images/level_easy.png", :class => "th radius game_level_image", :name => "easy") %></li>
+			<li><%= image_tag("/images/level_medium.png", :class => "th radius game_level_image", :name => "medium") %></li>
+			<li><%= image_tag("/images/level_hard.png", :class => "th radius game_level_image", :name => "hard") %></li>
+		</div>
+	</div>
+
+	<div class="large-6 columns">
+		<div class="small-block-grid-1 game_type_div">
+			<li><h3 id="game_header">Please choose a Game</h3></li>
+			<li><%= image_tag("/images/game_add.png", :class => "th radius game_type_image", :name => "add") %></li>
+			<li><%= image_tag("/images/game_subtract.png", :class => "th radius game_type_image", :name => "subtract") %></li>
+			<li><%= image_tag("/images/game_multiply.png", :class => "th radius game_type_image", :name => "multiply") %></li>
+			<li><%= image_tag("/images/game_divide.png", :class => "th radius game_type_image", :name => "divide") %></li>
+		</div>
+	</div>
+
+	<div class="large-12 columns">
+		<form action="/home/set_options">
+			<input type="hidden" name="game_level"  id="game_level_input_id" value=""/>
+			<input type="hidden" name="game_name" id="game_name_input_id"  value=""/>
+		    <button type="submit" name="start_game" class="button expand">Start Game</button>
+		</form>
+	</div>
+</div>
