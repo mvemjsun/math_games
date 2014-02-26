@@ -1,5 +1,5 @@
 ## kids Maths
-> Ad free maths practice for 6 to 10 year olds !
+> Ad free maths practice application for 6 to 10 year olds !
 
 ### Summary
 
