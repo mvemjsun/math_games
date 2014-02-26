@@ -49,8 +49,6 @@ class GameController < ApplicationController
         session[:questions_answered] += 1
       end
 
-      session[:questions_presented] += 1
-
       @message = "You scored "+session[:questions_answered].to_s + " out of "+session[:questions_presented].to_s+"."
       x = session[:questions_answered].to_f
       y = session[:questions_presented].to_f
@@ -58,8 +56,10 @@ class GameController < ApplicationController
 
       case @percent
 
-      when 0.0 .. 70.0
-        @message << " Well done. Keep trying."
+      when 0.0 .. 0.0
+        @message << " Keep trying and don't give up."
+      when 1.0 .. 70.0
+        @message << " Well done. you are getting there."
       when 71.0 .. 90.0
         @message << " Excellent. Keep up the good work"
       when 91.0 .. 100.0

@@ -12,7 +12,7 @@ After do |scenario|
     # Evidence file name is the feature file and line number suffixed with time stamp
     # replace the path separater, a . and : by an underscore character
     feature_line = scenario.location.to_s.gsub(/[\.\\\:]/,"_")
-    @browser.screenshot.save "evidence/#{feature_line}-#{ext}.png"
+    @browser.screenshot.save "./features/evidence/#{feature_line}-#{ext}.png"
   end
   @browser.close
 end

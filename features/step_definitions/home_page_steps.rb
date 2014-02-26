@@ -44,5 +44,8 @@ When(/^the user chooses level "(.*?)" with "(.*?)" the page title should be "(.*
 		page.start_game
 		page.title.should == page_title
 	end
-	
+end
+
+Then(/^I start the game$/) do
+	on(HomePage).start_game
 end

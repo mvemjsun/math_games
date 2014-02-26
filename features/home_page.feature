@@ -24,7 +24,6 @@ Scenario: User should be able to select one game level
 	And I select the game level of "hard"
 	Then there should be only one highlighted level
 	
-
 Scenario: User should be able to select one game type
 	And I select the game "add"
 	And I select the game "subtract"
