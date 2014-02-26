@@ -13,5 +13,12 @@ When answering a question the text box senses a right or wrong answer (jquery) t
 3. Cucumber for BDD tests
 4. ZURB foundation for SCSS
 
+### Screens
+Home Page: 
+![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/options.PNG "Kids Maths Home")
+
+Sample sum: 
+![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/sum.PNG "Sum")
+
 ### TODO
 1. Add sign in and account support
