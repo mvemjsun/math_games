@@ -32,3 +32,4 @@ end
 gem 'jquery-rails'
 gem 'cucumber-rails', :require => false
 gem 'database_cleaner'
+gem 'devise'

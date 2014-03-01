@@ -17,8 +17,8 @@ class HomeController < ApplicationController
   def set_options
   	
     if (params[:game_level] && params[:game_name])
-    session[:game_level] = params[:game_level] if !params[:game_level].empty?
-  	session[:game_name] = params[:game_name] if !params[:game_name].empty?
+      session[:game_level] = params[:game_level] if !params[:game_level].empty?
+    	session[:game_name] = params[:game_name] if !params[:game_name].empty?
     end
 
   	if session[:game_level] && session[:game_name]
