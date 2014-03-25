@@ -1,26 +1,24 @@
 ## kids Maths
-> Ad free maths practice application for 6 to 10 year olds !
+> Ad free maths practice application for 6 to 9 year olds !
 
 ### Summary
 
 A rails application that allows children (and adults!) to practice maths sums. There are 3 game levels to choose from (Easy, Medium & Hard). The game offered are Addition, Subtraction, Multiplication and division. Scores are displayed on the top right corner. The user is given the option to skip a question, get the next question or finish a game.
 
-When answering a question the text box senses a right or wrong answer (jquery) to change the background colour of the text box. This gives the user a chance to correct the answer.
-
 ### Implementation
 1. Rails 3
 2. JQuery
-3. Cucumber for BDD tests
-4. ZURB foundation for SCSS
+3. RSpec for TDD
+4. Bootstrap for CSS
+5. Devise for security
+6. Lazy high charts for some progress charts
 
 ### Screens
-Home Page: 
-![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/options.PNG "Kids Maths Home")
+Login Page: 
+<img src="http://oi49.tinypic.com/s5wn05.jpg"></img>
 
 Sample sum: 
 ![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/sum.PNG "Sum")
 
 ### TODO
-1. Model for scores, level, subject
-2. Store scores
-3. Graphs
+1. More tests
