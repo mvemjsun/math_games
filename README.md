@@ -15,10 +15,7 @@ A rails application that allows children (and adults!) to practice maths sums. T
 
 ### Screens
 Login Page: 
-<img src="http://oi49.tinypic.com/s5wn05.jpg"></img>
-
-Sample sum: 
-![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/sum.PNG "Sum")
+<img src="https://github.com/mvemjsun/kids_maths/blob/master/public/images/login.PNG"></img>
 
 ### TODO
 1. More tests
