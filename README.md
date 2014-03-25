@@ -30,6 +30,6 @@ Report:
 ![report Screen](/public/images/report.PNG)
 
 Responsive Screen: 
-![report Screen](/public/images/responsive_320_480.PNG)
+![Responsive Screen](/public/images/responsive_320_480.PNG)
 ### TODO
 1. More tests
