@@ -17,5 +17,17 @@ A rails application that allows children (and adults!) to practice maths sums. T
 Login Page: 
 ![Login Screen](/public/images/login.PNG)
 
+Options Page: 
+![Options Screen](/public/images/index.PNG)
+
+Game Page: 
+![Game Screen](/public/images/game.PNG)
+
+Complete Page: 
+![Complete game Screen](/public/images/complete_game.PNG)
+
+Report: 
+![report Screen](/public/images/report.PNG)
+
 ### TODO
 1. More tests
