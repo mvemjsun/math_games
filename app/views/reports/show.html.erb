@@ -1,0 +1,40 @@
+<h1><%= current_user.name %></h1>
+<% if @chart_full_summary %>
+	<%= high_chart("report_summary", @chart_full_summary) %>
+	<br/>
+	<form class="form-inline" role="form" name="report_form" action="/reports/show/"<%= params[:game_date] %> >
+  		<div class="form-group">
+    		<label class="sr-only" for="report_form">Date</label>
+    		<input type="text"  class="form-control" name="game_date" id="report_date" placeholder="Enter Date" readonly="readonly"/>
+  		</div>
+  		<button type="submit" class="btn btn-primary">Get report for a date</button>
+	</form>
+<% else %>
+	<div id="rep1">
+	<% if @chart_date_summary_add %>
+		<%= high_chart("report_summary_add", @chart_date_summary_add) %>
+	<% end %>
+	<hr/>
+	</div>
+
+	<div id="rep2">
+	<% if @chart_date_summary_subtract %>
+		<%= high_chart("report_summary_subtract", @chart_date_summary_subtract) %>
+	<% end %>
+	<hr/>
+	</div>
+
+	<div id="rep3">
+	<% if @chart_date_summary_multiply %>
+		<%= high_chart("report_summary_multiply", @chart_date_summary_multiply) %>
+	<% end %>
+	<hr/>
+	</div>
+
+	<div id="rep4">
+	<% if @chart_date_summary_divide %>
+		<%= high_chart("report_summary_divide", @chart_date_summary_divide) %>
+	<% end %>
+	</div>
+
+<% end %>

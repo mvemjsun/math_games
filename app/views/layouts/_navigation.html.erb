@@ -1,0 +1,26 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Start Again', root_path, class: 'navbar-brand' %>
+  
+      <% if user_signed_in? %> 
+        <span class = 'navbar-brand'> Score <%= session[:correct_answers] %> / <%= session[:questions_presented] %> </span>
+      <% end %>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+    </div>
+
+  </div>
+</nav>

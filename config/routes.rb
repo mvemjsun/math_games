@@ -1,15 +1,30 @@
-KidsMaths::Application.routes.draw do
-  get "home/show_options"
+KidsMathsNew::Application.routes.draw do
+  get "reports/show"
 
-  get "home/set_options"
+  get "reports/show/:game_date", to: "reports#show"
 
-  get "game/next_question"
+  get "questions/start"
 
-  get "game/skip_question"
+  get "questions/next"
 
-  get "game/finish_game"
+  get "questions/skip"
 
-  get "game/play"
+  get "questions/finish"
 
-  root :to => "home#show_options"
+  get "questions/logout"
+
+  get "questions/logout"
+
+  get "options/index"
+
+  get "options/set"
+
+  get "options/home"
+
+  devise_for :users
+
+  root to: "options#index"
+
+  match '*path' ,to: "options#home"
+
 end

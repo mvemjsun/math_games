@@ -1,31 +1,58 @@
-<% content_for :title, @title %>
-<div>
-	<h1  class="question_panel large-centered columns">
-		<div>
-			<form action="/game/next_question">
-				<ul class="inline-list">
-					<li id="question_text">
-						<%= @question[:operand1] %>
-						<%= @question[:operation] %>
-						<%= @question[:operand2] %>
-						=
-					</li>
+<div class="col-md-5 col-md-offset-3">
+	<%= content_for :title, @title %>
+	<br/>
+	<form class="form-horizontal" role="form" name="question_form" action="/questions/next">
+		<div class="my_jumbotron">
+			<% if @wrong_answer %>
+				<div class="alert alert-danger alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>Wrong answer!</strong> <%= wrong_answer_message %>.
+				</div>
+			<% end %>
+			<div class="input-group input-group-lg">
+			  <span class="input-group-addon" name="presented_question">
+			  	<%= @question[:operand1] %> <%= @question[:operator] %> <%= @question[:operand2] %> =
+			  </span>
+			  <input type="text" class="form-control" name="answer" id="answer_input" value="" autocomplete="off"/>
+			</div>
 
-					<li>
-						<input type="text" name="answer" id="answer_input" autocomplete="off">
-					</li>
-				</ul>
+			<div class="col-md-12">
+			<br/>
+				<table class="table table-bordered table-condensed table-responsive">
+					<tr>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="1">1</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="2">2</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="3">3</a></td></tr>
+					<tr>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="4">4</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="5">5</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="6">6</a></td></tr>
+					<tr>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="7">7</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="8">8</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypad" name="9">9</a></td></tr>
+					<tr><td><a type="button" class="btn btn-info btn-block keypad" name="0">0</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypadc" name="C">C</a></td>
+						<td><a type="button" class="btn btn-info btn-block keypadd" name="D">D</a></td></tr>	
+				</table>								
+			</div>
 
-				<ul class="inline-list">
-					<li><button type="submit" class="next_question" id="next_button">Next</button></li>
-					<li><a href="/game/skip_question" class="button" id="skip_url">Skip</a></li></li>		
-					<li><a href="/game/finish_game?answer=" class="button" id="finish_url">Finish</a></li>
-				</ul>
-			</form>
+			<p>
+			<div class="btn-group btn-group-justified">
+			  <div class="btn-group">
+			    <button type="submit" class="btn btn-primary" name="next_button">Next</button>
+			  </div>
+			  <div class="btn-group">
+			    <a type="button" class="btn btn-warning" href="/questions/skip" name="skip_button">Skip</a>
+			  </div>
+			  <div class="btn-group">
+			    <a type="button" class="btn btn-danger" href="/questions/finish" id="finish_url" name="finish_button">Finish</a>
+			  </div>
+			</div>
+			</p>
 		</div>
-	</h1>
-
-	<div class="hide answer">
-		<input type="text" id="expected_answer" value="<%= @question[:answer] %>">
+	</form>
+	<div class=hidden>
+		<input type="text" class="form-control" name="correct_answer" id="expected_answer" value="<%= question[:answer] %>"/>
 	</div>
 </div>

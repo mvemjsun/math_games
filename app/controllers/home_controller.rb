@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  before_filter :set_title
+  before_filter :authenticate_user!, :set_title
 
   def set_title
     @title = "Math games - choose options"

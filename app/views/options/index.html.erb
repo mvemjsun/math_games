@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3">
+	<% content_for :title, @title %>
+	<div class="row col-md-12">
+		<div class="col-md-6">
+			<h3 id="level_header">Please choose a Level</h3>
+					<button class="btn_options game_level_btn" name="easy">Easy</button>
+					<button class="btn_options game_level_btn" name="medium">Medium</button>
+					<button class="btn_options game_level_btn" name="hard">Hard</button>
+		</div>
+
+		<div class="col-md-6">
+				<h3 id="game_header">Please choose a Game</h3>
+					<button type="button" class="btn_options game_type_btn" name="add">Add</button>
+					<button type="button" class="btn_options game_type_btn" name="subtract">Subtract</button>
+					<button type="button" class="btn_options game_type_btn" name="multiply">Multiply</button>
+					<button type="button" class="btn_options game_type_btn" name="divide">Divide</button>
+		</div>
+
+		<div class="col-md-12">
+			<form action="/options/set" name="options_form">
+				<input type="hidden" name="game_level"  id="game_level_input_id" value=""/>
+				<input type="hidden" name="game_name" id="game_name_input_id"  value=""/><br/>
+			    <button type="submit" name="start_game" class="btn btn-primary btn-lg btn-block">Start Game</button>
+			</form>
+		</div>
+	</div>
+</div>

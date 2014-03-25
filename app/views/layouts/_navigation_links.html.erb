@@ -1,0 +1,6 @@
+<%# add navigation links to this file %>
+<% if user_signed_in? %>
+	<p class="navbar-text navbar-right"><a href="/questions/logout" class="navbar-link">Logout</a></p>
+	<p class="navbar-text navbar-right">You are <a href="#" class="navbar-link"><%= current_user.name %></a></p>
+	<p class="navbar-text navbar-right"><a href="/reports/show" class="navbar-link">Reports</a></p>
+<% end %>

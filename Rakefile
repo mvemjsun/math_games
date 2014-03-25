@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-KidsMaths::Application.load_tasks
+KidsMathsNew::Application.load_tasks

@@ -1,0 +1,19 @@
+<div class="col-md-6 col-md-offset-3">
+	<%= content_for :title, @title %>
+	<br/>
+	<div class="panel panel-default">
+	  <div class="panel-heading ">
+	    <h3 class="panel-title">Game Report Card (<%= correct %> out of <%= total %>)</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>Questions attempted = <%= session[:questions_presented] %></p>
+	    <p>Questions answered correctly = <%= session[:correct_answers] %></p>
+	    <p>Questions skipped = <%= session[:questions_skipped] %></p>
+	    <p>Questions answered wrong = <%= session[:wrong_answers] %></p>
+	    <p>Total time taken = <%= Time.at(ended_at - started_at).gmtime.strftime('%R:%S') %></p>
+	    <p>Time per question ~ <%= Time.at((ended_at - started_at)/session[:questions_presented]).gmtime.strftime('%R:%S') %></p>
+	  </div>
+	  <%= link_to 'Start Again', root_path, class: 'btn btn-primary btn-block' %>
+	  <br/>
+	</div>	
+</div>

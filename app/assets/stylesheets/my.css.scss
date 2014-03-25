@@ -1,4 +1,28 @@
+// import the CSS framework
+@import "bootstrap";
 
-.main {
-	background-color: #074E68;
+.btn_options {
+  @extend .btn;
+  @extend .btn-default;
+  @extend .btn-lg;	
+  @extend .btn-block;
+}
+
+.my_jumbotron {
+	@extend .jumbotron;
+	background-color: #999;
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-right: 1px;
+  padding-left: 3px;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.q_c {
+  width: 100%;
 }

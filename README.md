@@ -21,4 +21,6 @@ Sample sum:
 ![alt text](https://github.com/mvemjsun/kids_maths/blob/master/public/images/sum.PNG "Sum")
 
 ### TODO
-1. Add sign in and account support
+1. Model for scores, level, subject
+2. Store scores
+3. Graphs
