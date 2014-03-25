@@ -1,1 +1,0 @@
-## Rails application for children aged 6-10 to practice maths.
