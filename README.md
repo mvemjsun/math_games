@@ -3,7 +3,9 @@
 
 ### Summary
 
-A rails application that allows children (and adults!) to practice maths sums. There are 3 game levels to choose from (Easy, Medium & Hard). The game offered are Addition, Subtraction, Multiplication and division. Scores are displayed on the top right corner. The user is given the option to skip a question, get the next question or finish a game.
+A rails application that allows children (and adults!) to practice maths sums. There are 3 game levels to choose from (Easy, Medium & Hard). The game offered are Addition, Subtraction, Multiplication and division. Scores are displayed on the top menu. The user is given the option to skip a question, get the next question or finish a game. A game summary is displayed at the end.
+
+The questions difficulty levels can be configured by changing the `config.yml` file. The `QuestionsHelper` module generates the question operands. As of now the operands are only whole numbers.
 
 ### Implementation
 1. Rails 3
