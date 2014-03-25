@@ -35,4 +35,7 @@ Responsive 320 * 480 Screen:
 ![Responsive Screen](/public/images/responsive_320_480.PNG)
 
 ### TODO
-1. More tests
+1. More model tests
+2. Give points with progress
+3. Redeem points !
+4. More reports
