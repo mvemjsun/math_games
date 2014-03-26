@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: maths
+  database: dcjfq4fto1a5tm
   pool: 5
-  username: admin
-  password:
+  username: kmkorooypiaypt
+  password: TN-HmkG_4KGaZvP5heV2iGpJb1
