@@ -32,3 +32,20 @@ test:
     easy: 5
     medium: 10
     hard: 15    
+production:
+  add:
+    easy: 10
+    medium: 30
+    hard: 100
+  subtract:
+    easy: 15
+    medium: 30
+    hard: 100  
+  multiply:
+    easy: 5
+    medium: 10
+    hard: 15
+  divide:
+    easy: 5
+    medium: 10
+    hard: 15        
