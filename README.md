@@ -7,6 +7,14 @@ A rails application that allows children (and adults!) to practice maths sums. T
 
 The questions difficulty levels can be configured by changing the `config.yml` file. The `QuestionsHelper` module generates the question operands. As of now the operands are only whole numbers.
 
+### To get started
+1. Get a copy of the application from github.
+2. run `bundle install`
+3. `rake db:migrate`
+4. `rake db:seed`
+
+start the rails application using `rails s`. Have fun
+
 ### Implementation
 1. Rails 3
 2. JQuery

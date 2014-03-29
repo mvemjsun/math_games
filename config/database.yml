@@ -22,8 +22,8 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: dcjfq4fto1a5tm
-  username: kmkorooypiaypt
-  password: TN-HmkG_4KGaZvP5heV2iGpJb1
-  host: ec2-54-197-238-8.compute-1.amazonaws.com
+  database: maths
+  username: 
+  password: 
+  host: 
   port: 5432

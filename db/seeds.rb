@@ -9,14 +9,28 @@
 #
 # User seed
 p "Creating User data"
-10.times do |count|
-	user = User.new
-	user.email = "user#{count}@example.com"
-	user.password = "password1234"
-	user.name = "Mr User number #{count}"
-	if user.save
-		p "User #{count} created"
-	else
-		p user.errors
-	end
+1.times do |count|
+    user = User.new
+    user.email = "user#{count}@example.com"
+    user.password = "password1234"
+    user.name = "Mr User number #{count}"
+    if user.save
+        p "User #{count} created"
+    else
+        p user.errors
+    end
+end
+
+
+["easy","medium","hard"].each do |level|
+    l = GameLevel.new
+    l.level = level
+    l.save
+end
+
+
+["add","subtract","multiply","divide"].each do |game|
+    g = GameName.new
+    g.name = game
+    g.save
 end
