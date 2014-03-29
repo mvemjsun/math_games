@@ -22,10 +22,16 @@ class ReportsController < ApplicationController
 	end
 
 	if params[:game_date]
-		@chart_date_summary_add = date_summary({date: params[:game_date],user_id: current_user,game_name: "add"})
-		@chart_date_summary_subtract = date_summary({date: params[:game_date],user_id: current_user,game_name: "subtract"})
-		@chart_date_summary_multiply = date_summary({date: params[:game_date],user_id: current_user,game_name: "multiply"})
-		@chart_date_summary_divide = date_summary({date: params[:game_date],user_id: current_user,game_name: "divide"})
+		if params[:game_name] && params[:game_name].size > 0
+			@chart_date_summary_add = date_summary({date: params[:game_date],user_id: current_user,game_name: "add"})
+			@chart_date_summary_subtract = date_summary({date: params[:game_date],user_id: current_user,game_name: "subtract"})
+			@chart_date_summary_multiply = date_summary({date: params[:game_date],user_id: current_user,game_name: "multiply"})
+			@chart_date_summary_divide = date_summary({date: params[:game_date],user_id: current_user,game_name: "divide"})
+		else
+			flash[:error] = "Please choose a date for which the report is needed."
+			redirect_to :reports_show
+		end
+
 	end
   end
 
